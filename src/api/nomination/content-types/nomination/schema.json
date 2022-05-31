@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nominations",
+  "info": {
+    "singularName": "nomination",
+    "pluralName": "nominations",
+    "displayName": "nomination"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "template": {
+      "type": "string"
+    }
+  }
+}

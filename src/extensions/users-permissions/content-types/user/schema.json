@@ -87,7 +87,6 @@
       "target": "api::comment.comment",
       "mappedBy": "user"
     },
-
     "badges_given": {
       "type": "relation",
       "relation": "oneToMany",
@@ -99,7 +98,16 @@
       "relation": "oneToMany",
       "target": "api::badge.badge",
       "mappedBy": "user_who_received_the_vote"
-
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

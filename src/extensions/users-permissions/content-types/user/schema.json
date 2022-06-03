@@ -86,6 +86,22 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "user"
+    },
+    "badges": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::badge.badge",
+      "inversedBy": "users_permissions_users"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

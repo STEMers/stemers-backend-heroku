@@ -87,21 +87,19 @@
       "target": "api::comment.comment",
       "mappedBy": "user"
     },
-    "badges": {
+
+    "badges_given": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::badge.badge",
-      "inversedBy": "users_permissions_users"
+      "mappedBy": "user_who_gave_the_vote"
     },
-    "avatar": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
+    "badges_received": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::badge.badge",
+      "mappedBy": "user_who_received_the_vote"
+
     }
   }
 }

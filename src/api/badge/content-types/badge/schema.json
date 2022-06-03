@@ -12,16 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "description": {
-      "type": "text"
+    "amount_of_stars": {
+      "type": "integer"
     },
-    "name": {
-      "type": "integer",
-      "required": true
+    "user_who_gave_the_vote": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "badges_given"
     },
-    "symbol": {
-      "type": "integer",
-      "required": true
+    "user_who_received_the_vote": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "badges_received"
     }
   }
 }

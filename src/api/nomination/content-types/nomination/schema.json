@@ -4,15 +4,28 @@
   "info": {
     "singularName": "nomination",
     "pluralName": "nominations",
-    "displayName": "nomination"
+    "displayName": "nomination",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "template": {
-      "type": "string"
+    "reason": {
+      "type": "text"
+    },
+    "user_who_give_vote": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "nominations_given"
+    },
+    "user_who_receive_vote": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "nominations_received"
     }
   }
 }

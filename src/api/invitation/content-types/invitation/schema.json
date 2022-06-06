@@ -12,11 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "by": {
+    "user_who_give_invite": {
       "type": "string",
       "required": true
     },
-    "date": {
+    "inviter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "invitations"
+    },
+    "email_which_receive_invitation": {
       "type": "string",
       "required": true
     }

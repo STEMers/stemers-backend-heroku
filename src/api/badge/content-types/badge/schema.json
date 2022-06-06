@@ -26,6 +26,14 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "badges_received"
+    },
+    "candidate_category": {
+      "type": "string",
+      "required": true
+    },
+    "voter_category": {
+      "type": "string",
+      "required": true
     }
   }
 }

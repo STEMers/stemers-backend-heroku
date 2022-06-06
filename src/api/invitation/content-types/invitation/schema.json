@@ -4,7 +4,8 @@
   "info": {
     "singularName": "invitation",
     "pluralName": "invitations",
-    "displayName": "invitation"
+    "displayName": "invitation",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,12 +19,6 @@
     "date": {
       "type": "string",
       "required": true
-    },
-    "user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "invitations"
     }
   }
 }

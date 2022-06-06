@@ -63,24 +63,6 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "inversedBy": "users_permissions_users"
-    },
-    "country": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::country.country",
-      "inversedBy": "users"
-    },
-    "invitations": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::invitation.invitation",
-      "mappedBy": "user"
-    },
     "comments": {
       "type": "relation",
       "relation": "oneToMany",
@@ -100,14 +82,15 @@
       "mappedBy": "user_who_received_the_vote"
     },
     "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

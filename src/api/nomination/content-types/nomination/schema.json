@@ -26,6 +26,12 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "nominations_received"
+    },
+    "voter": {
+      "type": "string"
+    },
+    "candidate": {
+      "type": "string"
     }
   }
 }

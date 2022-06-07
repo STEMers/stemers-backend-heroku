@@ -98,23 +98,11 @@
       "target": "api::invitation.invitation",
       "mappedBy": "inviter"
     },
-    "nominations_given": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::nomination.nomination",
-      "mappedBy": "user_who_give_vote"
-    },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "users_permissions_users"
-    },
-    "nominations_received": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::nomination.nomination",
-      "mappedBy": "user_who_receive_vote"
     },
     "firstname": {
       "type": "string",
@@ -146,6 +134,18 @@
     },
     "bio": {
       "type": "text"
+    },
+    "nominations_given": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nomination.nomination",
+      "mappedBy": "user_who_give_vote"
+    },
+    "nominations_received": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nomination.nomination",
+      "mappedBy": "user_who_receive_vote"
     }
   }
 }

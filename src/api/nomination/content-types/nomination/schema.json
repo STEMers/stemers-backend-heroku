@@ -32,6 +32,12 @@
     },
     "candidate": {
       "type": "string"
+    },
+    "voter_id": {
+      "type": "biginteger"
+    },
+    "candidate_id": {
+      "type": "biginteger"
     }
   }
 }

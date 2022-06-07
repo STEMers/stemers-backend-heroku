@@ -38,6 +38,12 @@
     },
     "candidate_id": {
       "type": "biginteger"
+    },
+    "voter_t_id": {
+      "type": "string"
+    },
+    "candidate_t_id": {
+      "type": "string"
     }
   }
 }

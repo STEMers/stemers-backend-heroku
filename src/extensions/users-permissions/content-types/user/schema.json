@@ -94,11 +94,11 @@
     },
     "firstname": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "lastname": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "age": {
       "type": "string"
@@ -109,7 +109,7 @@
     },
     "education": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "job": {
       "type": "string"

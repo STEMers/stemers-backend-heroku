@@ -63,18 +63,6 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "badges_given": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::badge.badge",
-      "mappedBy": "user_who_gave_the_vote"
-    },
-    "badges_received": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::badge.badge",
-      "mappedBy": "user_who_received_the_vote"
-    },
     "avatar": {
       "type": "media",
       "multiple": false,

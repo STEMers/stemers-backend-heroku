@@ -27,23 +27,11 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "nominations_received"
     },
-    "voter": {
-      "type": "string"
-    },
-    "candidate": {
-      "type": "string"
-    },
     "voter_id": {
       "type": "biginteger"
     },
     "candidate_id": {
       "type": "biginteger"
-    },
-    "voter_t_id": {
-      "type": "string"
-    },
-    "candidate_t_id": {
-      "type": "string"
     }
   }
 }

@@ -74,12 +74,6 @@
         "audios"
       ]
     },
-    "country": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::country.country",
-      "inversedBy": "users_permissions_users"
-    },
     "invitations": {
       "type": "relation",
       "relation": "oneToMany",
@@ -134,6 +128,12 @@
       "relation": "oneToMany",
       "target": "api::nomination.nomination",
       "mappedBy": "user_who_receive_vote"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::country.country",
+      "inversedBy": "users_permissions_users"
     }
   }
 }

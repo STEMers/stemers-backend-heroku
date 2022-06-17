@@ -18,16 +18,15 @@
       "unique": true
     },
     "shortName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "users_permissions_users": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "plugin::users-permissions.user",
       "mappedBy": "country"
-    },
-    "emoji": {
-      "type": "string"
     }
   }
 }

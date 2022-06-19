@@ -14,6 +14,10 @@ module.exports = ({ env }) => ({
         rejectUnauthorized: false
       },
     },
+    pool: {
+      min: 0,
+      max: 6,
+    },
     debug: false,
   },
 });

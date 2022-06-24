@@ -94,28 +94,35 @@
       "type": "string",
       "required": false
     },
-    "age": {
-      "type": "string"
+    "sex": {
+      "type": "string",
+      "default": "Female"
     },
     "location": {
       "type": "string",
       "required": false
     },
     "education": {
-      "type": "string",
-      "required": false
+      "type": "text",
+      "required": false,
+      "default": "An education summary should include only relevant academic qualifications and accomplishments. This makes it important to know the information to add to your education summary to prove you are the perfect fit for the position.",
+      "maxLength": 500
     },
     "job": {
-      "type": "string"
+      "type": "string",
+      "default": "Your job here"
     },
-    "family": {
-      "type": "string"
+    "Hobbies": {
+      "type": "text",
+      "maxLength": 800,
+      "default": "You should include hobbies and other interests, especially if they involve social and community activities. These activities are important – cover membership of societies, sports clubs/teams, etc. All these activities and the extent of your involvement give the recruiter clues about the real you and your interests."
     },
     "quote": {
       "type": "text"
     },
-    "bio": {
-      "type": "text"
+    "aboutme": {
+      "type": "text",
+      "default": "Your personal bio should concisely recap all your professional experience with a little flair and personality, but perhaps as important as what to include is what not to include. Boil down your life story into as short a word count as you can. Exclude any extraneous details. Aim for about one paragraph. The longer your bio is, the more likely you are to lose the reader’s attention."
     },
     "nominations_given": {
       "type": "relation",
@@ -123,17 +130,17 @@
       "target": "api::nomination.nomination",
       "mappedBy": "user_who_give_vote"
     },
-    "nominations_received": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::nomination.nomination",
-      "mappedBy": "user_who_receive_vote"
-    },
     "country": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::country.country",
       "inversedBy": "users_permissions_users"
+    },
+    "nominations_received": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nomination.nomination",
+      "mappedBy": "user_who_receive_vote"
     }
   }
 }

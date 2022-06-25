@@ -95,8 +95,7 @@
       "required": false
     },
     "sex": {
-      "type": "string",
-      "default": "Female"
+      "type": "string"
     },
     "location": {
       "type": "string",
@@ -109,13 +108,11 @@
       "maxLength": 500
     },
     "job": {
-      "type": "string",
-      "default": "Your job here"
+      "type": "string"
     },
-    "Hobbies": {
+    "hobby": {
       "type": "text",
-      "maxLength": 800,
-      "default": "You should include hobbies and other interests, especially if they involve social and community activities. These activities are important – cover membership of societies, sports clubs/teams, etc. All these activities and the extent of your involvement give the recruiter clues about the real you and your interests."
+      "required": false
     },
     "quote": {
       "type": "text"
@@ -141,6 +138,9 @@
       "relation": "oneToMany",
       "target": "api::nomination.nomination",
       "mappedBy": "user_who_receive_vote"
+    },
+    "dob": {
+      "type": "date"
     }
   }
 }
